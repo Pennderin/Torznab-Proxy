@@ -1,0 +1,9 @@
+{
+  "name": "torznab-proxy",
+  "version": "2.0.0",
+  "description": "Torznab-compatible proxy for custom torrent scrapers with FlareSolverr integration",
+  "main": "src/server.js",
+  "scripts": { "start": "node src/server.js" },
+  "dependencies": { "express": "^4.18.2" }
+}
+

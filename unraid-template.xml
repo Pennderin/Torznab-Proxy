@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>torznab-proxy</Name>
+  <Repository>ghcr.io/pennderin/torznab-proxy:latest</Repository>
+  <Registry>https://github.com/Pennderin/Torznab-Proxy/pkgs/container/torznab-proxy</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Pennderin/Torznab-Proxy</Support>
+  <Project>https://github.com/Pennderin/Torznab-Proxy</Project>
+  <Overview>Torznab-compatible proxy that scrapes torrent sites and serves results via standard Torznab XML API. Works with Prowlarr as a custom indexer. Supports multiple scrapers with FlareSolverr for Cloudflare bypass.</Overview>
+  <Category>Downloaders:Other</Category>
+  <WebUI>http://[IP]:[PORT:9878]/health</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Pennderin/Torznab-Proxy/main/unraid-template.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Pennderin/Torznab-Proxy/main/public/icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web Port" Target="9878" Default="9878" Mode="tcp" Description="Port for Torznab API" Type="Port" Display="always" Required="true" Mask="false">9878</Config>
+  <Config Name="API Key" Target="API_KEY" Default="torznab-proxy-key" Mode="" Description="API key for Torznab requests" Type="Variable" Display="always" Required="true" Mask="false">torznab-proxy-key</Config>
+  <Config Name="Proxy Host" Target="PROXY_HOST" Default="192.168.0.190" Mode="" Description="IP/hostname for magnet resolution callbacks" Type="Variable" Display="always" Required="true" Mask="false">192.168.0.190</Config>
+  <Config Name="FlareSolverr URL" Target="FLARESOLVERR_URL" Default="http://192.168.0.190:8191/v1" Mode="" Description="FlareSolverr endpoint for Cloudflare bypass" Type="Variable" Display="always" Required="true" Mask="false">http://192.168.0.190:8191/v1</Config>
+</Container>
