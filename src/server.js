@@ -145,7 +145,7 @@ app.get('/magnet/:scraperId', async function(req, res) {
   console.log('[magnet] [' + scraperId + '] Resolving id=' + dataId + ' "' + decodeURIComponent(title) + '"');
 
   try {
-    var magnetUrl = await scraper.resolveMagnet(dataId);
+    var magnetUrl = await scraper.resolveMagnet(dataId, decodeURIComponent(title));
 
     if (magnetUrl) {
       console.log('[magnet] [' + scraperId + '] Resolved: ' + magnetUrl.substring(0, 80) + '...');
